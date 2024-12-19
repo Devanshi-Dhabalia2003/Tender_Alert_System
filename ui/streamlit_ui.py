@@ -1,7 +1,10 @@
+import sys
+import os
 import streamlit as st
 from datetime import datetime, timedelta
-from ..email_sender.email_sender import send_email
-from ..database.crud_operations import fetch_filtered_records
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from email_sender.email_sender import send_email
+from database.crud_operations import fetch_filtered_records
 import pandas as pd
 
 def run():
